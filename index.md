@@ -14,11 +14,10 @@
 </span>
 <br/> 
 yay, it worked!
-
-# my first D3 project
-<html id="hello-world">
+<span id="hello-world"></span>
+<html>
 <head>
-<title>D3.js Test</title>
+<title></title>
 <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
@@ -28,7 +27,7 @@ yay, it worked!
 <script type="text/javascript">
 //write some text using d3.js
 d3.select("#textContainer").append("h1")
-.text("Hello D3.js!");
+.text("Hello D3.js! <-- written with D3");
 </script>
 </body>
 </html>
