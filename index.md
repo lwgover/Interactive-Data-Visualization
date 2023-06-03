@@ -17,20 +17,20 @@ yay, it worked!
 
 # my first D3 project
 <span id="hello-world">
-    <html>
-        <head>
-            <title>D3.js Test</title>
-            <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-        </head>
-        <body>
-            <div id="textContainer">
-            <!-- D3 will write to this container -->
-            </div>
-            <script type="text/javascript">
-            //write some text using d3.js
-            d3.select("#textContainer").append("h1")
-                .text("Hello D3.js!");
-            </script>
-        </body>
-    </html>
+<html>
+<head>
+<title>D3.js Test</title>
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+<div id="textContainer">
+<!-- D3 will write to this container -->
+</div>
+<script type="text/javascript">
+//write some text using d3.js
+d3.select("#textContainer").append("h1")
+.text("Hello D3.js!");
+</script>
+</body>
+</html>
 </span>
