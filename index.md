@@ -1,3 +1,9 @@
-# Interactive Data Visualization for the Web
+# Table of Contents
 
-Here are all the projects I've made from the textbook `Interactive Data Visualization for the Web by Scott Murray`. I'll update this throughout with my projects.
+1. <a href="#svg">SVG Practice</a>
+
+<span id="svg">
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="20" fill="blue"/>
+    </svg>
+</span>
