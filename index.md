@@ -3,6 +3,7 @@
 
 1. <a href="#svg">SVG Practice</a>
 2. <a href="#hello-world">My First D3</a>
+3. <a href="#hello-world">My First Data</a>
 
 # Learning SVG
 <span id="svg">
@@ -17,7 +18,6 @@ yay, it worked!
 <span id="hello-world"></span>
 <html>
 <head>
-<title></title>
 <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
@@ -29,5 +29,16 @@ yay, it worked!
 d3.select("#textContainer").append("h1")
 .text("Hello D3.js! <-- written with D3");
 </script>
+</body>
+</html>
+<span id="my-first-data"></span>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+<div id="textContainer"></div>
+<script type="text/javascript" src="./my-first-data.js"></script>
 </body>
 </html>
