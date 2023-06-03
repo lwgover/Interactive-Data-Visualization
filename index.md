@@ -1,4 +1,4 @@
-#Interactive Data Visualization
+# Interactive Data Visualization
 # Table of Contents
 
 1. <a href="#svg">SVG Practice</a>
@@ -12,6 +12,7 @@
       <circle cx="210" cy="100" r="60" fill="rgba(0,0,255,0.3)" stroke = "rgba(0 ,255,0, 0.3)" stroke-width = "15"/>
     </svg>
 </span>
+<br/> 
 yay, it worked!
 
 # my first D3 project
