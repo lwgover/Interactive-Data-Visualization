@@ -16,8 +16,7 @@
 yay, it worked!
 
 # my first D3 project
-<span id="hello-world">
-<html>
+<html id="hello-world">
 <head>
 <title>D3.js Test</title>
 <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
@@ -33,4 +32,3 @@ d3.select("#textContainer").append("h1")
 </script>
 </body>
 </html>
-</span>
