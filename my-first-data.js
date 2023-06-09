@@ -27,7 +27,7 @@ var rawConverter = function (d) {
 };
 
 // load and parse the csv data file using d3.csv() then display
-d3.csv("https://www.lucasgover.com/Interactive-Data-Visualization/percent_bachelors_degrees_women_usa.csv/", function(rawData) {
+d3.csv("https://www.lucasgover.com/Interactive-Data-Visualization/percent_bachelors_degrees_women_usa.csv", function(rawData) {
     
     var data = rawConverter(rawData);
     //console.log(data);
