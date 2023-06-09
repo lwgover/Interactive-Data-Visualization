@@ -61,7 +61,7 @@ d3.csv("https://www.lucasgover.com/Interactive-Data-Visualization/percent_bachel
 
 var draw_svg = function () {
     var height = 400;
-    var width = 600;
+    var width = d3.select("body").node().getBoundingClientRect().width;
     var n = 42;
     //d3.select("#textContainer").append("h1").text(d.Agriculture);
     console.log(dataset);
