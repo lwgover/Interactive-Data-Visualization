@@ -40,8 +40,11 @@ var draw_svg = function (d) {
     //d3.select("#textContainer").append("h1").text(d.Agriculture);
 }
 
-var dataset=[25,7,5,26,11,8,25,14,23,19, 14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
-    24,18,25,9,3];
+var dataset = [];
+for (var i = 0; i < 25; i++) {
+    var newNumber = Math.random() * 30; 
+    dataset.push(newNumber);
+}
 d3.select("body").selectAll("div").select("#bar-chart")
     .data(dataset)
     .enter()

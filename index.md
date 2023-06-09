@@ -40,7 +40,9 @@ d3.select("#textContainer").append("h1")
 </head>
 <body>
 <script type="text/javascript" src="./my-first-data.js"></script>
+<div id="bar-graph-container">
 <div class = "bar-chart">
 Basic Bar Chart!
+</div>
 </div>
 </body>
