@@ -1,6 +1,6 @@
 // define the degrees_file_loc
-let degrees_file_loc = 'https://www.lucasgover.com/Interactive-Data-Visualization/percent_bachelors_degrees_women_usa.csv'
-var dataset = [];
+degrees_file_loc = 'https://www.lucasgover.com/Interactive-Data-Visualization/percent_bachelors_degrees_women_usa.csv'
+dataset = [];
 
 var rawConverter = function (d) {
     return {
