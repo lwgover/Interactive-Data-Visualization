@@ -3,7 +3,7 @@
 
 1. <a href="#svg">SVG Practice</a>
 2. <a href="#hello-world">My First D3</a>
-3. <a href="#hello-world">My First Data</a>
+3. <a href="#basic-bar-chart">Basic Bar Chart with divs</a>
 
 # Learning SVG
 <span id="svg">
@@ -31,14 +31,16 @@ d3.select("#textContainer").append("h1")
 </script>
 </body>
 </html>
-<span id="my-first-data"></span>
+<span id="basic-bar-chart"></span>
 <html>
 <head>
 <title></title>
 <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+<link href="./style.css" rel="stylesheet">
 </head>
 <body>
-<div id="textContainer"></div>
 <script type="text/javascript" src="./my-first-data.js"></script>
+<div class = "bar-chart">
+Basic Bar Chart!
+</div>
 </body>
-</html>
