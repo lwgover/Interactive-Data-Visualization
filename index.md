@@ -41,7 +41,7 @@ d3.select("#textContainer").append("h1")
 <body>
 <div id="chart">
 <div class="bar-chart">
-Computer Science Gender split by year
+Women in Computer Science by year
 </div>
 </div>
 <script type="text/javascript" src="./my-first-data.js"></script>

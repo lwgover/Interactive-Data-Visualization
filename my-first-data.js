@@ -78,9 +78,9 @@ var draw_svg = function () {
        .append("rect");
 
     rects.attr("x", function(d, i) { return (width/(n+2))*(i+1);})
-       .attr("y", function(d) {return height-(height/100)*d.Communications_and_Journalism; }) 
+       .attr("y", function(d) {return height-(height/100)*d.Computer_Science; }) 
        .attr("width", (width/(n+2))-1)
-       .attr("height", function(d) {return (height/100)*d.Communications_and_Journalism; });
+       .attr("height", function(d) {return (height/100)*d.Computer_Science; });
 
     rects.attr("fill", "teal");
 }
