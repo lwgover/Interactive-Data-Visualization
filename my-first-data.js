@@ -45,8 +45,8 @@ var draw_svg = function () {
     //d3.select("#textContainer").append("h1").text(d.Agriculture);
     console.log(dataset);
     d3.select("body")
-        .select("div")
-        //.select("#bar-graph-container")
+        //.select("div")
+        .select("#chart")
         .selectAll("div")
         .data(dataset)
         .enter()
