@@ -71,7 +71,9 @@ var draw_svg = function () {
         .append("svg");
 
     svg.attr("width", width)
-       .attr("height", height);
+       .attr("height", height)
+       .attr("display", "block") // centers svg
+       .attr("margin", "auto");
 
     var rects = svg.selectAll("rect")
        .data(dataset)
