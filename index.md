@@ -3,7 +3,7 @@
 
 1. <a href="#svg">SVG Practice</a>
 2. <a href="#hello-world">My First D3</a>
-3. <a href="#basic-bar-chart">Basic Bar Chart with divs</a>
+3. <a href="#basic-bar-chart">Basic Bar Chart</a>
 
 # Learning SVG
 <span id="svg">

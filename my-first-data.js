@@ -63,6 +63,7 @@ var draw_svg = function () {
     var height = 400;
     var width = d3.select("body").node().getBoundingClientRect().width;
     var n = 42;
+    var bar_width = (width/(n+2));
     //d3.select("#textContainer").append("h1").text(d.Agriculture);
     console.log(dataset);
     var svg = d3.select("body")
@@ -77,12 +78,32 @@ var draw_svg = function () {
        .enter()
        .append("rect");
 
-    rects.attr("x", function(d, i) { return (width/(n+2))*(i+1);})
-       .attr("y", function(d) {return height-(height/100)*d.Computer_Science; }) 
-       .attr("width", (width/(n+2))-1)
+    rects.attr("x", function(d, i) { return bar_width*(i+1);})
+       .attr("y", function(d) {return height-(height/100)*d.Computer_Science - 20; }) 
+       .attr("width", bar_width-1)
        .attr("height", function(d) {return (height/100)*d.Computer_Science; });
 
     rects.attr("fill", "teal");
+
+    var text = svg.selectAll("text")
+    .data(dataset)
+    .enter();
+
+    text.append("text")
+        .text(function(d) { return Math.round(d.Computer_Science);})
+        .attr("font-family", "sans-serif")
+        .attr("font-size", "11px")
+        .attr("fill", "white")
+        .attr("x", function(d, i) { return bar_width*(i+1) + (bar_width/2) - 6;})
+        .attr("y", function(d) {return height-(height/100)*d.Computer_Science; });
+
+    text.append("text")
+        .text(function(d) { return Math.round(d.Year);})
+        .attr("font-family", "sans-serif")
+        .attr("font-size", "10px")
+        .attr("fill", "black")
+        .attr("x", function(d, i) { return bar_width*(i+1) + (bar_width/2) - 12;})
+        .attr("y", height-10 );
+
+
 }
-
-
