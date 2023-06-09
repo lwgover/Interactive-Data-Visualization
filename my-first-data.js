@@ -53,7 +53,7 @@ var draw_svg = function () {
         .attr("class", "bar")
         .style("height", function(d) { 
             console.log(d);
-            return 5*d.Computer_Science + "px";
+            return 5*d.Education + "px";
         })
         .style("margin-right", "2px");
 }
