@@ -27,7 +27,7 @@ var rawConverter = function (d) {
 };
 
 // load and parse the csv data file using d3.csv() then display
-d3.csv("http://www.lucasgover.com/Interactive-Data-Visualization/percent_bachelors_degrees_women_usa.csv", function(rawData) {
+d3.csv("https://www.lucasgover.com/Interactive-Data-Visualization/percent_bachelors_degrees_women_usa.csv/", function(rawData) {
     
     var data = rawConverter(rawData);
     //console.log(data);
@@ -46,6 +46,7 @@ var draw_svg = function () {
     console.log(dataset);
     d3.select("body")
         .select("div")
+        //.select("#bar-graph-container")
         .selectAll("div")
         .data(dataset)
         .enter()
@@ -53,7 +54,7 @@ var draw_svg = function () {
         .attr("class", "bar")
         .style("height", function(d) { 
             console.log(d);
-            return 5*d.Education + "px";
+            return 5*d.Computer_Science + "px";
         })
         .style("margin-right", "2px");
 }
