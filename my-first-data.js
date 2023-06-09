@@ -45,12 +45,16 @@ for (var i = 0; i < 25; i++) {
     var newNumber = Math.random() * 30; 
     dataset.push(newNumber);
 }
-d3.select("body").selectAll("div").select("#bar-chart")
+d3.select("body")
+    .select("div")
+    .selectAll("div")
     .data(dataset)
     .enter()
     .append("div")
     .attr("class", "bar")
     .style("height", function(d) { 
+        console.log(d);
         return 5*d + "px";
     })
-    .style("margin-right", "2px");
+    .style("margin-right", "2px")
+    .style("justify-content", "center");
