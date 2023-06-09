@@ -4,6 +4,7 @@
 1. <a href="#svg">SVG Practice</a>
 2. <a href="#hello-world">My First D3</a>
 3. <a href="#basic-bar-chart">Basic Bar Chart</a>
+4. <a href="#basic-bar-chart">Scatter-Plot</a>
 
 # Learning SVG
 <span id="svg">
@@ -45,5 +46,21 @@ Women in Computer Science by year
 </div>
 </div>
 <script type="text/javascript" src="./my-first-data.js"></script>
+</body>
+</html>
+<span id="scatter-plot"></span>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+<link href="./style.css" rel="stylesheet">
+</head>
+<body>
+<div id="chart">
+<div class="scatter-plot">
+scatter plot
+</div>
+</div>
+<script type="text/javascript" src="./scatter_plot.js"></script>
 </body>
 </html>
