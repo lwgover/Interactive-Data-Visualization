@@ -41,22 +41,48 @@ d3.csv("https://www.lucasgover.com/Interactive-Data-Visualization/percent_bachel
 });
 
 
+// var draw_svg = function () {
+//     //d3.select("#textContainer").append("h1").text(d.Agriculture);
+//     console.log(dataset);
+//     d3.select("body")
+//         //.select("div")
+//         .select("#chart")
+//         .selectAll("div")
+//         .data(dataset)
+//         .enter()
+//         .append("div")
+//         .attr("class", "bar")
+//         .style("height", function(d) { 
+//             console.log(d);
+//             return 5*d.Computer_Science + "px";
+//         })
+//         .style("margin-right", "2px");
+// }
+
 var draw_svg = function () {
+    var height = 400;
+    var width = 600;
+    var n = 42;
     //d3.select("#textContainer").append("h1").text(d.Agriculture);
     console.log(dataset);
-    d3.select("body")
-        //.select("div")
+    var svg = d3.select("body")
         .select("#chart")
-        .selectAll("div")
-        .data(dataset)
-        .enter()
-        .append("div")
-        .attr("class", "bar")
-        .style("height", function(d) { 
-            console.log(d);
-            return 5*d.Computer_Science + "px";
-        })
-        .style("margin-right", "2px");
+        .append("svg");
+
+    svg.attr("width", width)
+       .attr("height", height);
+
+    var rects = svg.selectAll("rect")
+       .data(dataset)
+       .enter()
+       .append("rect");
+
+    rects.attr("x", function(d, i) { return (width/(n+2))*(i+1);})
+       .attr("y", function(d) {return height-(height/100)*d.Communications_and_Journalism; }) 
+       .attr("width", (width/(n+2))-1)
+       .attr("height", function(d) {return (height/100)*d.Communications_and_Journalism; });
+
+    rects.attr("fill", "teal");
 }
 
 
