@@ -50,10 +50,23 @@ var draw_svg = function () {
        .attr("display", "block") // centers svg
        .attr("margin", "auto");
 
-    var dots = svg.selectAll("circle")
-       .data(dataset.map((post) => post.Computer_Science))
-       .enter()
-       .append("circle");
+    svg.append("clipPath")
+        .attr("id", "chart-area")
+        .append("rect")
+    //Make a new clipPath
+    //Assign an ID
+    //Within the clipPath, create a new rect1
+    .attr("x", 30) //Set rect's position and size... .attr("y", padding)
+    .attr("width", width-90)
+    .attr("height", height-20);
+
+    var dots = svg.append("g")
+    .attr("id", "circles")
+    .attr("clip-path", "url(#chart-area)")
+    .selectAll("circle")
+    .data(dataset.map((post) => post.Computer_Science))
+    .enter()
+    .append("circle")
 
     dots.attr("cx", function(d, i) { return bar_width*(i+1);})
        .attr("cy", function(d) {return height-(height/100)*d - 20; }) 
@@ -98,9 +111,14 @@ var draw_svg = function () {
             .ease(d3.easeElasticOut)
             .duration(1000)
             .attr("cy", function(d) {return height-(height/100)*d - 20; })
-            .attr("fill", function(d) {
-                return "rgb(" + (255 - (d* (d/20))) +"," + (d* (d/20)) + "," +  (d* (d/20)) + ")"; });
-            //Do something on click
+            .on("end",function() {
+                d3.select(this)
+                .transition()
+                .duration(500)
+                .attr("fill", function(d) {
+                    return "rgb(" + (255 - (d* (d/20))) +"," + (d* (d/20)) + "," +  (d* (d/20)) + ")"; });
+
+            });
     });
 
 }

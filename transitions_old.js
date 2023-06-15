@@ -50,19 +50,20 @@ var draw_svg = function () {
        .attr("display", "block") // centers svg
        .attr("margin", "auto");
 
-    var rects = svg.selectAll("circle")
-       .data(dataset)
+    var dots = svg.selectAll("circle")
+       .data(dataset.map((post) => post.Computer_Science))
        .enter()
        .append("circle");
 
-    rects.attr("cx", function(d, i) { return bar_width*(i+1);})
-       .attr("cy", function(d) {return height-(height/100)*d.Computer_Science - 20; }) 
+    dots.attr("cx", function(d, i) { return bar_width*(i+1);})
+       .attr("cy", function(d) {return height-(height/100)*d - 20; }) 
        .attr("r", 5)
 
-    rects.attr("fill", "teal");
+    dots.attr("fill", function(d) {
+        return "rgb(" + (255 - (d* (d/20))) +"," + (d* (d/20)) + "," +  (d* (d/20)) + ")"; });
 
     var text = svg.selectAll("text")
-    .data(dataset)
+    .data(dataset.map((data) => data.Computer_Science))
     .enter();
     
     var xScale = d3.scaleLinear() .domain([1970,2011])
@@ -85,5 +86,21 @@ var draw_svg = function () {
      .attr("class", "axis")
      .attr("transform", "translate(" + bar_width + ",20)")
      .call(yAxis);
+
+     d3.select("body").select("#chart").select("p")
+    .on("click", function() {
+        console.log(dataset.map((post) => post.Communications_and_Journalism));
+        dots.data(dataset.map((post) => post.Communications_and_Journalism))
+            .transition()
+            .delay(function(d, i) {
+                return i / dataset.length * 1000; // <-- Where the magic happens
+                    })
+            .ease(d3.easeElasticOut)
+            .duration(1000)
+            .attr("cy", function(d) {return height-(height/100)*d - 20; })
+            .attr("fill", function(d) {
+                return "rgb(" + (255 - (d* (d/20))) +"," + (d* (d/20)) + "," +  (d* (d/20)) + ")"; });
+            //Do something on click
+    });
 
 }
