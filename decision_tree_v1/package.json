@@ -1,0 +1,14 @@
+{
+  "name": "c72ce793260d721f",
+  "main": "c72ce793260d721f@429.js",
+  "version": "429.0.0",
+  "homepage": "https://observablehq.com/d/c72ce793260d721f",
+  "author": {
+    "name": "demos",
+    "url": "https://observablehq.com/@demos"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
